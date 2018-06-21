@@ -206,7 +206,7 @@ class SpeedTest(object):
         LOG.info('Your latitude: %s', location[1])
         LOG.info('Your longitude: %s', location[2])
         connection.request(
-            'GET', '/speedtest-servers.php?x=%d' % now, None, extra_headers)
+            'GET', '/speedtest-servers-static.php?x=%d' % now, None, extra_headers)
         response = connection.getresponse()
         reply = response.read().decode('utf-8')
         server_list = re.findall(
